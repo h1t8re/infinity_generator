@@ -1,10 +1,10 @@
 def generateur_recurrent_d_espace(unité_de_dimension, coordonné, dimension):
-    for i in unité_de_dimension:
+    for unité in unité_de_dimension:
         if len(coordonné)+1 < dimension:
-            for y in generateur_recurrent_d_espace(unité_de_dimension, coordonné + str(i), dimension):
+            for y in generateur_recurrent_d_espace(unité_de_dimension, coordonné + str(unité), dimension):
                 yield y
         elif len(coordonné)+1 == dimension:
-            yield coordonné + str(i)
+            yield coordonné + str(unité)
 
 def generateur_recurrent_d_espace_infini():
 	i = 0

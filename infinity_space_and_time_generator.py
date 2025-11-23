@@ -10,5 +10,5 @@ def infinity_space_and_time_generator():
   i = 0
   while True:
     i = i + 1
-    for x in infinity_space_generator([ y for y in range(0, i)], "", i):
+    for x in infinity_space_generator([y for y in range(0, i)], "", i):
       yield x
